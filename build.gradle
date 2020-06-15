@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.jeonghyeong'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 sourceCompatibility = '1.8'
 
 configurations {
@@ -26,6 +26,14 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+
+	compile group: 'org.apache.kafka', name: 'kafka-clients'
+	// https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-dynamodb
+	compile group: 'com.amazonaws', name: 'aws-java-sdk-dynamodb', version: '1.11.801'
+
+	// https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+	compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
 }
 
 test {
